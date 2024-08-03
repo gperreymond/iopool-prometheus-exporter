@@ -1,0 +1,35 @@
+services:
+
+  iopool-prometheus-exporter:
+    container_name: 'iopool-prometheus-exporter'
+    image: 'timberio/vector:0.40.0-alpine'
+    command: '--config-dir=/etc/vector'
+    env_file:
+      - './.env'
+    volumes:
+      - './vector:/etc/vector:ro'
+    networks:
+      - 'iopool'
+    ports:
+      - '9598:9598/tcp'
+
+  prometheus:
+    image: 'prom/prometheus:v2.53.1'
+    container_name: 'prometheus'
+    volumes:
+      - './prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro'
+      - 'prometheus_data:/prometheus/data'
+    networks:
+      - 'iopool'
+    ports:
+      - '9090:9090/tcp'
+
+networks:
+  
+  iopool:
+    name: 'iopool'
+    external: true
+
+volumes:
+  
+  prometheus_data: {}

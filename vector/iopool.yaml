@@ -1,0 +1,62 @@
+sources:
+
+  iopool-source:
+    type: 'http_client'
+    endpoint: 'https://api.iopool.com/v1/pool/${IOPOOL_POOL_ID}'
+    method: GET
+    headers:
+      'x-api-key':
+        - '${IOPOOL_API_KEY}'
+    scrape_interval_secs: 60
+
+transforms:
+
+  iopool-filter:
+    type: 'remap'
+    inputs:
+      - 'iopool-source'
+    source: |-
+      . = parse_json!(.message)
+      .ecoId = .latestMeasure.ecoId
+      .iopool_orp_measure = .latestMeasure.orp
+      .iopool_ph_measure = .latestMeasure.ph
+      .iopool_temperature_measure = .latestMeasure.temperature
+
+  iopool-metrics:
+    type: 'log_to_metric'
+    inputs:
+      - 'iopool-filter'
+    metrics:
+      - type: 'gauge'
+        field: 'iopool_orp_measure'
+        tags:
+          id: "{{id}}"
+          ecoId: "{{ecoId}}"
+          mode: "{{mode}}"
+      - type: 'gauge'
+        field: 'iopool_ph_measure'
+        tags:
+          id: "{{id}}"
+          ecoId: "{{ecoId}}"
+          mode: "{{mode}}"
+      - type: 'gauge'
+        field: 'iopool_temperature_measure'
+        tags:
+          id: "{{id}}"
+          ecoId: "{{ecoId}}"
+          mode: "{{mode}}"
+
+sinks:
+
+  console:
+    type: 'console'
+    inputs:
+      - 'iopool-filter'
+    encoding:
+      codec: 'json'
+
+  promethes-exporter:
+    type: 'prometheus_exporter'
+    inputs:
+      - 'iopool-metrics'
+    address: 0.0.0.0:9598
