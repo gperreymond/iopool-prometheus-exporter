@@ -1,4 +1,4 @@
-# IOPOOL PROMETHEUS_EXPORTER
+# IOPOOL PROMETHEUS EXPORTER
 
 The main goal is to have prometheus exporter for your iopool metrics.
 
