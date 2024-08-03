@@ -1,31 +1,61 @@
 groups:
-  - name: 'iopool'
+  - name: 'iopool-temperature'
     rules:
-      - alert: 'VeryHighTemperatureSaturation'
+      - alert: 'TemperatureVeryHighSaturation'
         expr: 'iopool_temperature_measure >= 32'
         for: '10m'
         labels:
           severity: 'critical'
         annotations:
-          summary: Very high temperature
-      - alert: 'MediumHighTemperatureSaturation'
+          summary: 'Temperature is very high'
+      - alert: 'TemperatureMediumHighSaturation'
         expr: 'iopool_temperature_measure > 29 and iopool_temperature_measure < 32'
         for: '10m'
         labels:
           severity: 'warning'
         annotations:
-          summary: Medium low temperature
-      - alert: 'MediumLowTemperatureSaturation'
+          summary: 'Temperature is medium high'
+      - alert: 'TemperatureMediumLowSaturation'
         expr: 'iopool_temperature_measure > 15 and iopool_temperature_measure < 20.5'
         for: '10m'
         labels:
           severity: 'warning'
         annotations:
-          summary: Very low temperature
-      - alert: 'VeryLowTemperatureSaturation'
+          summary: 'Temperature is medium low'
+      - alert: 'TemperatureVeryLowTSaturation'
         expr: 'iopool_temperature_measure <= 15'
         for: '10m'
         labels:
           severity: 'critical'
         annotations:
-          summary: Very low temperature
+          summary: 'Temperature is very low'
+  - name: 'iopool-orp'
+    rules:
+      - alert: 'ORPVeryHighSaturation'
+        expr: 'iopool_orp_measure >= 1000'
+        for: '10m'
+        labels:
+          severity: 'critical'
+        annotations:
+          summary: 'ORP is very high'
+      - alert: 'ORPMediumHighSaturation'
+        expr: 'iopool_orp_measure > 800 and iopool_orp_measure < 1000'
+        for: '10m'
+        labels:
+          severity: 'warning'
+        annotations:
+          summary: 'ORP is medium high'
+      - alert: 'ORPMediumLowSaturation'
+        expr: 'iopool_orp_measure > 550 and iopool_orp_measure < 650'
+        for: '10m'
+        labels:
+          severity: 'warning'
+        annotations:
+          summary: 'ORP is medium low'
+      - alert: 'ORPVeryLowTSaturation'
+        expr: 'iopool_orp_measure <= 550'
+        for: '10m'
+        labels:
+          severity: 'critical'
+        annotations:
+          summary: 'ORP is very low'
