@@ -1,8 +1,12 @@
 global:
   scrape_interval: 30s
 
+rule_files:
+  - '/etc/prometheus/rules/iopool.yaml'
+
 scrape_configs:
   - job_name: 'iopool-prometheus-exporter'
     static_configs:
       - targets:
         - 'iopool-prometheus-exporter:9598'
+        

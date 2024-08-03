@@ -18,6 +18,7 @@ services:
     image: 'prom/prometheus:v2.53.1'
     volumes:
       - './prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro'
+      - './prometheus/rules:/etc/prometheus/rules:ro'
       - 'prometheus_data:/prometheus'
     networks:
       - 'iopool'

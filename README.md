@@ -31,3 +31,14 @@ $ docker network rm iopool
 
 * Prometheus server: http://localhost:9090
 * Grafana: http://localhost:3000
+
+## Images
+
+### Grafana dashboard
+![Grafana Dashboard](images/grafana-dashboard.png)
+
+### Grafana alerts
+![Grafana Alerts](images/grafana-alerts.png)
+
+### Prometheus rules
+![Prometheus Rules](images/prometheus-rules.png)

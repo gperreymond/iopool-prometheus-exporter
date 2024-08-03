@@ -1,0 +1,31 @@
+groups:
+  - name: 'iopool'
+    rules:
+      - alert: 'VeryHighTemperatureSaturation'
+        expr: 'iopool_temperature_measure >= 32'
+        for: '10m'
+        labels:
+          severity: 'critical'
+        annotations:
+          summary: Very high temperature
+      - alert: 'MediumHighTemperatureSaturation'
+        expr: 'iopool_temperature_measure > 29 and iopool_temperature_measure < 32'
+        for: '10m'
+        labels:
+          severity: 'warning'
+        annotations:
+          summary: Medium low temperature
+      - alert: 'MediumLowTemperatureSaturation'
+        expr: 'iopool_temperature_measure > 15 and iopool_temperature_measure < 20.5'
+        for: '10m'
+        labels:
+          severity: 'warning'
+        annotations:
+          summary: Very low temperature
+      - alert: 'VeryLowTemperatureSaturation'
+        expr: 'iopool_temperature_measure <= 15'
+        for: '10m'
+        labels:
+          severity: 'critical'
+        annotations:
+          summary: Very low temperature
