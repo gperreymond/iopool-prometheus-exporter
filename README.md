@@ -28,5 +28,4 @@ $ docker compose down
 $ docker network rm iopool
 ```
 
-* The metrics will be here: http://localhost:9598/metrics
 * Prometheus server: http://localhost:9090

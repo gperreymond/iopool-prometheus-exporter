@@ -10,8 +10,6 @@ services:
       - './vector:/etc/vector:ro'
     networks:
       - 'iopool'
-    ports:
-      - '9598:9598/tcp'
 
   prometheus:
     image: 'prom/prometheus:v2.53.1'
