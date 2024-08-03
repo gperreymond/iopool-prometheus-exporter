@@ -2,6 +2,7 @@ services:
 
   iopool-prometheus-exporter:
     container_name: 'iopool-prometheus-exporter'
+    restart: 'always'
     image: 'timberio/vector:0.40.0-alpine'
     command: '--config-dir=/etc/vector'
     env_file:
@@ -12,8 +13,9 @@ services:
       - 'iopool'
 
   prometheus:
-    image: 'prom/prometheus:v2.53.1'
     container_name: 'prometheus'
+    restart: 'always'
+    image: 'prom/prometheus:v2.53.1'
     volumes:
       - './prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro'
       - 'prometheus_data:/prometheus'
@@ -21,6 +23,26 @@ services:
       - 'iopool'
     ports:
       - '9090:9090/tcp'
+    depends_on:
+      - 'iopool-prometheus-exporter'
+
+  grafana:
+    container_name: 'grafana'
+    restart: 'always'
+    image: 'grafana/grafana:11.1.2'
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: 'changeme'
+      GF_USERS_ALLOW_SIGN_UP: 'false'
+      GF_INSTALL_PLUGINS: 'briangann-gauge-panel'
+    volumes:
+      - 'grafana_data:/var/lib/grafana'
+      - './grafana/provisioning/:/etc/grafana/provisioning:ro'
+    networks:
+      - 'iopool'
+    ports:
+      - '3000:3000/tcp'
+    depends_on:
+      - 'prometheus'
 
 networks:
   
@@ -31,3 +53,4 @@ networks:
 volumes:
   
   prometheus_data: {}
+  grafana_data: {}
