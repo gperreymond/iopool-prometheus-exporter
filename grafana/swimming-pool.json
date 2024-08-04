@@ -403,28 +403,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "purple",
+                "color": "text",
                 "value": null
-              },
-              {
-                "color": "light-red",
-                "value": 10
-              },
-              {
-                "color": "light-orange",
-                "value": 15
-              },
-              {
-                "color": "light-green",
-                "value": 20.5
-              },
-              {
-                "color": "light-orange",
-                "value": 29
-              },
-              {
-                "color": "light-red",
-                "value": 32
               }
             ]
           },
@@ -465,14 +445,14 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "iopool_temperature_measure offset 1h",
+          "expr": "iopool_temperature_measure - iopool_temperature_measure offset 1h",
           "instant": true,
           "legendFormat": "__auto",
           "range": false,
           "refId": "A"
         }
       ],
-      "title": "Temperature -1h",
+      "title": "Delta temperature -1h",
       "type": "stat"
     },
     {
@@ -491,28 +471,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "purple",
+                "color": "text",
                 "value": null
-              },
-              {
-                "color": "light-red",
-                "value": 10
-              },
-              {
-                "color": "light-orange",
-                "value": 15
-              },
-              {
-                "color": "light-green",
-                "value": 20.5
-              },
-              {
-                "color": "light-orange",
-                "value": 29
-              },
-              {
-                "color": "light-red",
-                "value": 32
               }
             ]
           },
@@ -526,7 +486,7 @@
         "x": 16,
         "y": 0
       },
-      "id": 13,
+      "id": 21,
       "options": {
         "colorMode": "background",
         "graphMode": "area",
@@ -553,14 +513,14 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "iopool_temperature_measure offset 2h",
+          "expr": "iopool_temperature_measure - iopool_temperature_measure offset 12h",
           "instant": true,
           "legendFormat": "__auto",
           "range": false,
           "refId": "A"
         }
       ],
-      "title": "Temperature -2h",
+      "title": "Delta temperature -12h",
       "type": "stat"
     },
     {
@@ -579,28 +539,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "purple",
+                "color": "text",
                 "value": null
-              },
-              {
-                "color": "light-red",
-                "value": 10
-              },
-              {
-                "color": "light-orange",
-                "value": 15
-              },
-              {
-                "color": "light-green",
-                "value": 20.5
-              },
-              {
-                "color": "light-orange",
-                "value": 29
-              },
-              {
-                "color": "light-red",
-                "value": 32
               }
             ]
           },
@@ -614,7 +554,7 @@
         "x": 20,
         "y": 0
       },
-      "id": 16,
+      "id": 22,
       "options": {
         "colorMode": "background",
         "graphMode": "area",
@@ -641,14 +581,14 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "iopool_temperature_measure offset 4h",
+          "expr": "iopool_temperature_measure - iopool_temperature_measure offset 24h",
           "instant": true,
           "legendFormat": "__auto",
           "range": false,
           "refId": "A"
         }
       ],
-      "title": "Temperature -4h",
+      "title": "Delta temperature -24h",
       "type": "stat"
     },
     {
@@ -667,28 +607,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "purple",
+                "color": "text",
                 "value": null
-              },
-              {
-                "color": "light-red",
-                "value": 400
-              },
-              {
-                "color": "light-orange",
-                "value": 550
-              },
-              {
-                "color": "light-green",
-                "value": 650
-              },
-              {
-                "color": "light-orange",
-                "value": 800
-              },
-              {
-                "color": "light-red",
-                "value": 1000
               }
             ]
           },
@@ -729,14 +649,14 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "iopool_orp_measure offset 1h",
+          "expr": "iopool_orp_measure - iopool_orp_measure offset 1h",
           "instant": true,
           "legendFormat": "__auto",
           "range": false,
           "refId": "A"
         }
       ],
-      "title": "ORP -1h",
+      "title": "Delta ORP -1h",
       "type": "stat"
     },
     {
@@ -755,28 +675,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "purple",
+                "color": "text",
                 "value": null
-              },
-              {
-                "color": "light-red",
-                "value": 400
-              },
-              {
-                "color": "light-orange",
-                "value": 550
-              },
-              {
-                "color": "light-green",
-                "value": 650
-              },
-              {
-                "color": "light-orange",
-                "value": 800
-              },
-              {
-                "color": "light-red",
-                "value": 1000
               }
             ]
           },
@@ -790,7 +690,7 @@
         "x": 16,
         "y": 3
       },
-      "id": 14,
+      "id": 23,
       "options": {
         "colorMode": "background",
         "graphMode": "area",
@@ -817,14 +717,14 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "iopool_orp_measure offset 2h",
+          "expr": "iopool_orp_measure - iopool_orp_measure offset 12h",
           "instant": true,
           "legendFormat": "__auto",
           "range": false,
           "refId": "A"
         }
       ],
-      "title": "ORP -2h",
+      "title": "Delta ORP -12h",
       "type": "stat"
     },
     {
@@ -843,28 +743,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "purple",
+                "color": "text",
                 "value": null
-              },
-              {
-                "color": "light-red",
-                "value": 400
-              },
-              {
-                "color": "light-orange",
-                "value": 550
-              },
-              {
-                "color": "light-green",
-                "value": 650
-              },
-              {
-                "color": "light-orange",
-                "value": 800
-              },
-              {
-                "color": "light-red",
-                "value": 1000
               }
             ]
           },
@@ -878,7 +758,7 @@
         "x": 20,
         "y": 3
       },
-      "id": 17,
+      "id": 24,
       "options": {
         "colorMode": "background",
         "graphMode": "area",
@@ -905,14 +785,14 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "iopool_orp_measure offset 4h",
+          "expr": "iopool_orp_measure - iopool_orp_measure offset 24h",
           "instant": true,
           "legendFormat": "__auto",
           "range": false,
           "refId": "A"
         }
       ],
-      "title": "ORP -4h",
+      "title": "Delta ORP -24h",
       "type": "stat"
     },
     {
@@ -931,28 +811,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "purple",
+                "color": "text",
                 "value": null
-              },
-              {
-                "color": "light-red",
-                "value": 6
-              },
-              {
-                "color": "light-orange",
-                "value": 6.8
-              },
-              {
-                "color": "light-green",
-                "value": 7.1
-              },
-              {
-                "color": "light-orange",
-                "value": 7.7
-              },
-              {
-                "color": "light-red",
-                "value": 8.1
               }
             ]
           },
@@ -993,14 +853,14 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "iopool_ph_measure offset 1h",
+          "expr": "iopool_ph_measure - iopool_ph_measure offset 1h",
           "instant": true,
           "legendFormat": "__auto",
           "range": false,
           "refId": "A"
         }
       ],
-      "title": "PH -1h",
+      "title": "Delta PH -1h",
       "type": "stat"
     },
     {
@@ -1019,28 +879,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "purple",
+                "color": "text",
                 "value": null
-              },
-              {
-                "color": "light-red",
-                "value": 6
-              },
-              {
-                "color": "light-orange",
-                "value": 6.8
-              },
-              {
-                "color": "light-green",
-                "value": 7.1
-              },
-              {
-                "color": "light-orange",
-                "value": 7.7
-              },
-              {
-                "color": "light-red",
-                "value": 8.1
               }
             ]
           },
@@ -1054,7 +894,7 @@
         "x": 16,
         "y": 6
       },
-      "id": 15,
+      "id": 25,
       "options": {
         "colorMode": "background",
         "graphMode": "area",
@@ -1081,14 +921,14 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "iopool_ph_measure offset 2h",
+          "expr": "iopool_ph_measure - iopool_ph_measure offset 12h",
           "instant": true,
           "legendFormat": "__auto",
           "range": false,
           "refId": "A"
         }
       ],
-      "title": "PH -2h",
+      "title": "Delta PH -12h",
       "type": "stat"
     },
     {
@@ -1107,28 +947,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "purple",
+                "color": "text",
                 "value": null
-              },
-              {
-                "color": "light-red",
-                "value": 6
-              },
-              {
-                "color": "light-orange",
-                "value": 6.8
-              },
-              {
-                "color": "light-green",
-                "value": 7.1
-              },
-              {
-                "color": "light-orange",
-                "value": 7.7
-              },
-              {
-                "color": "light-red",
-                "value": 8.1
               }
             ]
           },
@@ -1142,7 +962,7 @@
         "x": 20,
         "y": 6
       },
-      "id": 18,
+      "id": 26,
       "options": {
         "colorMode": "background",
         "graphMode": "area",
@@ -1169,14 +989,14 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "iopool_ph_measure offset 4h",
+          "expr": "iopool_ph_measure - iopool_ph_measure offset 2h",
           "instant": true,
           "legendFormat": "__auto",
           "range": false,
           "refId": "A"
         }
       ],
-      "title": "PH -4h",
+      "title": "Delta PH -24h",
       "type": "stat"
     },
     {
@@ -1187,7 +1007,8 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "palette-classic"
+            "fixedColor": "light-blue",
+            "mode": "fixed"
           },
           "custom": {
             "axisBorderShow": false,
@@ -1221,6 +1042,7 @@
               "mode": "off"
             }
           },
+          "fieldMinMax": false,
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
@@ -1233,21 +1055,81 @@
           },
           "unit": "celsius"
         },
-        "overrides": []
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "C"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "none"
+              },
+              {
+                "id": "custom.lineWidth",
+                "value": 0
+              },
+              {
+                "id": "custom.axisPlacement",
+                "value": "hidden"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "mode": "continuous-RdYlGr"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "B"
+            },
+            "properties": [
+              {
+                "id": "custom.fillOpacity",
+                "value": 0
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "text",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.lineStyle",
+                "value": {
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
+                }
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
-        "h": 7,
+        "h": 12,
         "w": 8,
         "x": 0,
         "y": 9
       },
-      "id": 2,
+      "id": 19,
       "options": {
         "legend": {
-          "calcs": [],
-          "displayMode": "list",
+          "calcs": [
+            "min",
+            "mean",
+            "max"
+          ],
+          "displayMode": "table",
           "placement": "bottom",
-          "showLegend": false
+          "showLegend": true
         },
         "tooltip": {
           "mode": "single",
@@ -1263,9 +1145,35 @@
           "editorMode": "code",
           "expr": "iopool_temperature_measure",
           "instant": false,
-          "legendFormat": "ECO: {{ecoId}}",
+          "legendFormat": "realtime",
           "range": true,
           "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "iopool_temperature_measure offset 24h",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "time -24h",
+          "range": true,
+          "refId": "B"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "count(ALERTS{alertname=~\"^Temperature.*\", alertstate=~\"(firing|pending)\"}) by (alertname, severity)",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "{{alertname}}",
+          "range": true,
+          "refId": "C"
         }
       ],
       "title": "Temperature",
@@ -1279,7 +1187,8 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "palette-classic"
+            "fixedColor": "light-blue",
+            "mode": "fixed"
           },
           "custom": {
             "axisBorderShow": false,
@@ -1313,6 +1222,7 @@
               "mode": "off"
             }
           },
+          "fieldMinMax": false,
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
@@ -1325,10 +1235,66 @@
           },
           "unit": "mvolt"
         },
-        "overrides": []
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "C"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "none"
+              },
+              {
+                "id": "custom.lineWidth",
+                "value": 0
+              },
+              {
+                "id": "custom.axisPlacement",
+                "value": "hidden"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "mode": "continuous-RdYlGr"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "B"
+            },
+            "properties": [
+              {
+                "id": "custom.fillOpacity",
+                "value": 1
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "text",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.lineStyle",
+                "value": {
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
+                }
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
-        "h": 7,
+        "h": 12,
         "w": 8,
         "x": 8,
         "y": 9
@@ -1336,10 +1302,14 @@
       "id": 9,
       "options": {
         "legend": {
-          "calcs": [],
-          "displayMode": "list",
+          "calcs": [
+            "min",
+            "mean",
+            "max"
+          ],
+          "displayMode": "table",
           "placement": "bottom",
-          "showLegend": false
+          "showLegend": true
         },
         "tooltip": {
           "mode": "single",
@@ -1355,9 +1325,35 @@
           "editorMode": "code",
           "expr": "iopool_orp_measure",
           "instant": false,
-          "legendFormat": "ECO: {{ecoId}}",
+          "legendFormat": "realtime",
           "range": true,
           "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "iopool_orp_measure offset 24h",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "time -24h",
+          "range": true,
+          "refId": "B"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "count(ALERTS{alertname=~\"^ORP.*\", alertstate=~\"(firing|pending)\"}) by (alertname, severity)",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "{{alertname}}",
+          "range": true,
+          "refId": "C"
         }
       ],
       "title": "ORP",
@@ -1371,7 +1367,8 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "palette-classic"
+            "fixedColor": "light-blue",
+            "mode": "fixed"
           },
           "custom": {
             "axisBorderShow": false,
@@ -1405,6 +1402,7 @@
               "mode": "off"
             }
           },
+          "fieldMinMax": false,
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
@@ -1417,21 +1415,81 @@
           },
           "unit": "none"
         },
-        "overrides": []
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "C"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "none"
+              },
+              {
+                "id": "custom.lineWidth",
+                "value": 0
+              },
+              {
+                "id": "custom.axisPlacement",
+                "value": "hidden"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "mode": "continuous-RdYlGr"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "B"
+            },
+            "properties": [
+              {
+                "id": "custom.fillOpacity",
+                "value": 1
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "text",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.lineStyle",
+                "value": {
+                  "dash": [
+                    0,
+                    10
+                  ],
+                  "fill": "dot"
+                }
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
-        "h": 7,
+        "h": 12,
         "w": 8,
         "x": 16,
         "y": 9
       },
-      "id": 5,
+      "id": 20,
       "options": {
         "legend": {
-          "calcs": [],
-          "displayMode": "list",
+          "calcs": [
+            "min",
+            "mean",
+            "max"
+          ],
+          "displayMode": "table",
           "placement": "bottom",
-          "showLegend": false
+          "showLegend": true
         },
         "tooltip": {
           "mode": "single",
@@ -1447,250 +1505,39 @@
           "editorMode": "code",
           "expr": "iopool_ph_measure",
           "instant": false,
-          "legendFormat": "ECO: {{ecoId}}",
+          "legendFormat": "realtime",
           "range": true,
           "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "iopool_ph_measure offset 24h",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "time -24h",
+          "range": true,
+          "refId": "B"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "count(ALERTS{alertname=~\"^PH.*\", alertstate=~\"(firing|pending)\"}) by (alertname, severity)",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "{{alertname}}",
+          "range": true,
+          "refId": "C"
         }
       ],
       "title": "PH",
       "type": "timeseries"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "custom": {
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "scaleDistribution": {
-              "type": "linear"
-            }
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 6,
-        "w": 8,
-        "x": 0,
-        "y": 16
-      },
-      "id": 22,
-      "options": {
-        "calculate": false,
-        "cellGap": 1,
-        "color": {
-          "exponent": 0.5,
-          "fill": "dark-orange",
-          "mode": "scheme",
-          "reverse": false,
-          "scale": "exponential",
-          "scheme": "Oranges",
-          "steps": 64
-        },
-        "exemplars": {
-          "color": "rgba(255,0,255,0.7)"
-        },
-        "filterValues": {
-          "le": 1e-9
-        },
-        "legend": {
-          "show": true
-        },
-        "rowsFrame": {
-          "layout": "auto"
-        },
-        "tooltip": {
-          "mode": "single",
-          "showColorScale": false,
-          "yHistogram": false
-        },
-        "yAxis": {
-          "axisPlacement": "left",
-          "reverse": false
-        }
-      },
-      "pluginVersion": "11.1.2",
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
-          "editorMode": "code",
-          "expr": "ALERTS{alertname=~\"^Temperature.*\", alertstate=\"firing\"}",
-          "instant": false,
-          "legendFormat": "{{alertname}}",
-          "range": true,
-          "refId": "A"
-        }
-      ],
-      "title": "Temperature / Alerts",
-      "type": "heatmap"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "custom": {
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "scaleDistribution": {
-              "type": "linear"
-            }
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 6,
-        "w": 8,
-        "x": 8,
-        "y": 16
-      },
-      "id": 20,
-      "options": {
-        "calculate": false,
-        "cellGap": 1,
-        "color": {
-          "exponent": 0.5,
-          "fill": "dark-orange",
-          "mode": "scheme",
-          "reverse": false,
-          "scale": "exponential",
-          "scheme": "Oranges",
-          "steps": 64
-        },
-        "exemplars": {
-          "color": "rgba(255,0,255,0.7)"
-        },
-        "filterValues": {
-          "le": 1e-9
-        },
-        "legend": {
-          "show": true
-        },
-        "rowsFrame": {
-          "layout": "auto"
-        },
-        "tooltip": {
-          "mode": "single",
-          "showColorScale": false,
-          "yHistogram": false
-        },
-        "yAxis": {
-          "axisPlacement": "left",
-          "reverse": false
-        }
-      },
-      "pluginVersion": "11.1.2",
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
-          "editorMode": "code",
-          "expr": "ALERTS{alertname=~\"^ORP.*\", alertstate=\"firing\"}",
-          "instant": false,
-          "legendFormat": "{{alertname}}",
-          "range": true,
-          "refId": "A"
-        }
-      ],
-      "title": "ORP / Alerts",
-      "type": "heatmap"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "custom": {
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "scaleDistribution": {
-              "type": "linear"
-            }
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 6,
-        "w": 8,
-        "x": 16,
-        "y": 16
-      },
-      "id": 21,
-      "options": {
-        "calculate": false,
-        "cellGap": 1,
-        "color": {
-          "exponent": 0.5,
-          "fill": "dark-orange",
-          "mode": "scheme",
-          "reverse": false,
-          "scale": "exponential",
-          "scheme": "Oranges",
-          "steps": 64
-        },
-        "exemplars": {
-          "color": "rgba(255,0,255,0.7)"
-        },
-        "filterValues": {
-          "le": 1e-9
-        },
-        "legend": {
-          "show": true
-        },
-        "rowsFrame": {
-          "layout": "auto"
-        },
-        "tooltip": {
-          "mode": "single",
-          "showColorScale": false,
-          "yHistogram": false
-        },
-        "yAxis": {
-          "axisPlacement": "left",
-          "reverse": false
-        }
-      },
-      "pluginVersion": "11.1.2",
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
-          "editorMode": "code",
-          "expr": "ALERTS{alertname=~\"^PH.*\", alertstate=\"firing\"}",
-          "instant": false,
-          "legendFormat": "{{alertname}}",
-          "range": true,
-          "refId": "A"
-        }
-      ],
-      "title": "PH / Alerts",
-      "type": "heatmap"
     }
   ],
   "refresh": "10s",
@@ -1707,6 +1554,6 @@
   "timezone": "browser",
   "title": "SWIMMING POOL",
   "uid": "adtpcq16fe0aoe",
-  "version": 42,
+  "version": 68,
   "weekStart": ""
 }
