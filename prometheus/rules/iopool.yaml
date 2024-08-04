@@ -22,7 +22,7 @@ groups:
           severity: 'warning'
         annotations:
           summary: 'Temperature is medium low'
-      - alert: 'TemperatureVeryLowTSaturation'
+      - alert: 'TemperatureVeryLowSaturation'
         expr: 'iopool_temperature_measure <= 15'
         for: '10m'
         labels:
@@ -52,10 +52,41 @@ groups:
           severity: 'warning'
         annotations:
           summary: 'ORP is medium low'
-      - alert: 'ORPVeryLowTSaturation'
+      - alert: 'ORPVeryLowSaturation'
         expr: 'iopool_orp_measure <= 550'
         for: '10m'
         labels:
           severity: 'critical'
         annotations:
           summary: 'ORP is very low'
+  - name: 'iopool-ph'
+    rules:
+      - alert: 'PHVeryHighSaturation'
+        expr: 'iopool_ph_measure >= 8.1'
+        for: '10m'
+        labels:
+          severity: 'critical'
+        annotations:
+          summary: 'PH is very high'
+      - alert: 'PHMediumHighSaturation'
+        expr: 'iopool_ph_measure > 7.7 and iopool_ph_measure < 8.1'
+        for: '10m'
+        labels:
+          severity: 'warning'
+        annotations:
+          summary: 'PH is medium high'
+      - alert: 'PHMediumLowSaturation'
+        expr: 'iopool_ph_measure > 6.8 and iopool_ph_measure < 7.1'
+        for: '10m'
+        labels:
+          severity: 'warning'
+        annotations:
+          summary: 'PH is medium low'
+      - alert: 'PHVeryLowSaturation'
+        expr: 'iopool_ph_measure <= 6.8'
+        for: '10m'
+        labels:
+          severity: 'critical'
+        annotations:
+          summary: 'PH is very low'
+      
